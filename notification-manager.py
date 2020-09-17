@@ -53,7 +53,7 @@ def get_content_from_message(message_content):
         )
     elif notification_type == "Complaint":
         complaint_details = message_content["complaint"]
-        complaint_type = message_content["complaintFeedbackType"]
+        complaint_type = complaint_details["complaintFeedbackType"]
         complaint_recipients_object = complaint_details["complainedRecipients"]
         complaint_timestamp = complaint_details["timestamp"]
         complaint_user_agent = complaint_details.get("userAgent", "")
